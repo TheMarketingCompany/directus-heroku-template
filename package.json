@@ -6,7 +6,7 @@
     "start": "directus start"
   },
   "dependencies": {
-    "directus": "^9.0.0-rc.40",
-    "pg": "^8.5.1"
+    "directus": "^9.13.0",
+    "pg": "^8.7.3"
   }
 }
