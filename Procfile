@@ -1,2 +1,2 @@
-release: npx directus bootstrap
+release: npx directus start
 web: npx directus start
