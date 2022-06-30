@@ -190,5 +190,12 @@
     {
       "url": "https://github.com/heroku/heroku-buildpack-nodejs"
     }
-  ],
+  ],,
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
 }
