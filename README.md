@@ -13,11 +13,13 @@ This template demonstrates building Directus for Heroku. It contains addons to l
 * Node.js (via [nodejs buildpack](https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-nodejs))
 * PostgreSQL (via [postgresql addon](https://elements.heroku.com/addons/heroku-postgresql))
 * Redis (via [redis addon](https://elements.heroku.com/addons/heroku-redis))
-* Email (via [mailgun addon](https://elements.heroku.com/addons/mailgun))
+* Email (via [Amazon SES](https://aws.amazon.com/ses/))
+* S3 (via [Cloudflare R2](https://www.cloudflare.com/de-de/products/r2/))
+* Auth (via [Microsoft AAD](https://azure.microsoft.com/de-de/services/active-directory/))
 
 ## File uploads
 
-Make sure to configure the storage settings for your project, otherwise you won't be able to upload files to your instance. This template has some placeholder settings to guide on how to configure storage using DigitalOcean spaces, but you can use any (non local) compatible storage service in Heroku. For more information on how to configure Directus storage, check our [supported environment variables](https://docs.directus.io/reference/environment-variables/#file-storage).
+Make sure to configure the storage settings for your project, otherwise you won't be able to upload files to your instance. This template has some placeholder settings to guide on how to configure storage using Cloudflare R2 Buckets, but you can use any (non local) compatible storage service in Heroku. For more information on how to configure Directus storage, check our [supported environment variables](https://docs.directus.io/reference/environment-variables/#file-storage).
 
 ## Post-install
 
