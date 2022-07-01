@@ -1,7 +1,7 @@
 # Directus for Heroku
 
 <p align="center">
-    <a href="https://heroku.com/deploy?template=https://github.com/derFrisson/directus-heroku-template">
+    <a href="https://heroku.com/deploy?template=https://github.com/TheMarketingCompany/directus-heroku-template">
         <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
     </a>
 </p>
@@ -23,7 +23,7 @@ Make sure to configure the storage settings for your project, otherwise you won'
 
 ### Email settings
 
-This template uses Mailgun starter addon to setup emails for you project. It's highly recommended that you configure the email to your preferred settings after provisioning your project.
+This template uses Amazon SES to setup emails for you project. It's highly recommended that you configure the email to your preferred settings after provisioning your project.
 
 ### Admin user
 
