@@ -198,6 +198,7 @@
     }
   },
   "image": "heroku/nodejs",
+  "addons": [
     {
       "as": "DATABASE",
       "plan": "heroku-postgresql:hobby-dev",
