@@ -21,6 +21,18 @@ Make sure to configure the storage settings for your project, otherwise you won'
 
 ## Post-install
 
+### Storage provider
+
+Since Heroku Dynos are not suitable for storing media data, a cloud storage must be added. The template uses S3 compatible storage from Cloudflare.
+
+This currently requires an additional worker to download the data.
+
+* [Worker Snipet](https://gist.github.com/derFrisson/e31dbf35419206c48ef116c391ef04b1)
+
+### Microsoft Azure AD as Login Provider
+
+* [Look here!](https://learndirectus.com/how-to-add-microsoft-azure-login-to-directus/)
+
 ### Email settings
 
 This template uses Amazon SES to setup emails for you project. It's highly recommended that you configure the email to your preferred settings after provisioning your project.
@@ -43,3 +55,5 @@ This template uses PostgreSQL, but Directus supports [a number of other options]
 
 * [Directus Documentation](https://docs.directus.io/getting-started/introduction.html)
 * [Heroku Documentation](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+* [Cloudflare Worker Documentation](https://developers.cloudflare.com/workers/)
+* [Cloudflare R2 Documentation](https://developers.cloudflare.com/r2/)
