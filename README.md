@@ -29,7 +29,7 @@ Since Heroku Dynos are not suitable for storing media data, a cloud storage must
 
 This currently requires an additional worker to download the data.
 
-Create a binding to R2 for the worker with the variable "directus.
+Create a binding to R2 for the worker with the variable "directus".
 * [Worker Snipet](https://gist.github.com/derFrisson/e31dbf35419206c48ef116c391ef04b1)
 
 ### Microsoft Azure AD as Login Provider
