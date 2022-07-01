@@ -167,8 +167,7 @@
     },
     "AUTH_MICROSOFT_DEFAULT_ROLE_ID": {
       "description": "Set Admin Role ID after install in env",
-      "value": "xxxx",
-      "required": "false"
+      "value": "xxxx"
     },
     "AUTH_MICROSOFT_DRIVER": {
       "description": "openid it is, leave oauth2 alone.",
