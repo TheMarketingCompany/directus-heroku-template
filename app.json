@@ -2,7 +2,7 @@
   "name": "Directus",
   "website": "https://directus.io/",
   "description": "An Instant App & API for your SQL Database.",
-  "repository": "https://github.com/directus/heroku",
+  "repository": "https://github.com/TheMarketingCompany/directus-heroku-template",
   "logo": "https://raw.githubusercontent.com/directus-community/heroku-template/master/.github/logo.png",
   "keywords": [
     "directus",
@@ -31,7 +31,7 @@
     },
     "PUBLIC_URL": {
       "description": "Application public URL.",
-      "value": "/"
+      "value": ""
     },
     "DB_CLIENT": {
       "description": "Database server type.",
@@ -82,20 +82,20 @@
       "value": "/"
     },
     "STORAGE_CLOUD_PUBLIC_URL": {
-      "description": "The storage public URL.",
-      "value": "https://your-bucket.nyc3.digitaloceanspaces.com"
+      "description": "The Cloudflare Worker URL.",
+      "value": "https://your-worker.company.workers.dev"
     },
     "STORAGE_CLOUD_KEY": {
       "description": "The storage key id.",
-      "value": "your-s3-key-id"
+      "value": "your-r2-key-id"
     },
     "STORAGE_CLOUD_SECRET": {
       "description": "The storage secret key.",
-      "value": "your-s3-secret-key"
+      "value": "your-r2-secret-key"
     },
     "STORAGE_CLOUD_ENDPOINT": {
       "description": "The storage endpoint URL.",
-      "value": "https://nyc3.digitaloceanspaces.com"
+      "value": "https://xxxx.r2.cloudflarestorage.com"
     },
     "STORAGE_CLOUD_BUCKET": {
       "description": "The storage bucket name.",
@@ -103,7 +103,7 @@
     },
     "STORAGE_CLOUD_REGION": {
       "description": "The storage bucket region.",
-      "value": "nyc3"
+      "value": "auto"
     },
     "KEY": {
       "description": "The application key.",
@@ -129,34 +129,66 @@
       "description": "Same site cookie policy.",
       "value": "lax"
     },
-    "OAUTH_PROVIDERS": {
-      "description": "OAuth providers.",
-      "required": false,
-      "value": ""
-    },
     "EXTENSIONS_PATH": {
       "description": "The application's extension folder.",
       "value": "/app/extensions"
     },
     "EMAIL_TRANSPORT": {
       "description": "The email transport.",
-      "value": "smtp"
+      "value": "ses"
     },
-    "EMAIL_SMTP_POOL": {
-      "description": "Whether to setup smtp pooling or not.",
+    "EMAIL_FROM": {
+      "description": "The sender email.",
+      "value": ""
+    },
+    "EMAIL_SES_CREDENTIALS__ACCESS_KEY_ID": {
+      "description": "SES IAM User.",
+      "value": ""
+    },
+    "EMAIL_SES_CREDENTIALS__SECRET_ACCESS_KEY": {
+      "description": "SES IAM User Key.",
+      "value": ""
+    },
+    "EMAIL_SES_REGION": {
+      "description": "SES Region.",
+      "value": "eu-central-1"
+    },
+    "AUTH_MICROSOFT_ALLOW_PUBLIC_REGISTRATION": {
+      "description": "Auto registration of Dev Users.",
       "value": "true"
     },
-    "EMAIL_SMTP_HOST": {
-      "description": "The email server host.",
-      "value": "smtp.mailgun.org"
+    "AUTH_MICROSOFT_CLIENT_ID": {
+      "description": "App ID (Client ID)",
+      "value": ""
     },
-    "EMAIL_SMTP_PORT": {
-      "description": "The email server port.",
-      "value": "587"
+    "AUTH_MICROSOFT_CLIENT_SECRET": {
+      "description": "App Secret (Client Secret)",
+      "value": ""
     },
-    "EMAIL_SMTP_SECURE": {
-      "description": "Whether email connection is secure or not.",
-      "value": "false"
+    "AUTH_MICROSOFT_DEFAULT_ROLE_ID": {
+      "description": "Set Admin Role ID after install in env",
+      "required": "false",
+      "value": ""
+    },
+    "AUTH_MICROSOFT_DRIVER": {
+      "description": "openid it is, leave oauth2 alone.",
+      "value": "openid"
+    },
+    "AUTH_MICROSOFT_IDENTIFIER_KEY": {
+      "description": "use email or sub.",
+      "value": "email"
+    },
+    "AUTH_MICROSOFT_ISSUER_URL": {
+      "description": "Look in Azure for it. (Endpoints)",
+      "value": ""
+    },
+    "AUTH_MICROSOFT_SCOPE": {
+      "description": "openid profile email",
+      "value": "openid email"
+    },
+    "AUTH_PROVIDERS": {
+      "description": "names for provider logic.",
+      "value": "microsoft"
     }
   },
   "formation": {
@@ -166,11 +198,6 @@
     }
   },
   "image": "heroku/nodejs",
-  "addons": [
-    {
-      "as": "MAILGUN",
-      "plan": "mailgun:starter"
-    },
     {
       "as": "DATABASE",
       "plan": "heroku-postgresql:hobby-dev",
