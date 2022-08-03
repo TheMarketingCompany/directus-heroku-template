@@ -1,1 +1,1 @@
-web: npx directus start
+web: npx directus bootstrap
