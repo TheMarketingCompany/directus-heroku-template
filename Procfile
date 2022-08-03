@@ -1,2 +1,2 @@
-worker: npx directus bootstrap
+postdeploy: npx directus bootstrap
 web: npx directus start
