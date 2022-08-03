@@ -196,26 +196,20 @@
       "size": "free"
     }
   },
-  "image": "heroku/nodejs",
+  "image": "Scalingo/nodejs-buildpack",
   "addons": [
     {
-      "as": "DATABASE",
-      "plan": "heroku-postgresql:hobby-dev",
+      "plan": "postgresql:postgresql-sandbox",
       "options": {
-        "version": "12"
+        "version": "13"
       }
-    },
-    {
-      "as": "REDIS",
-      "plan": "heroku-redis:hobby-dev",
-      "options": {
-        "version": "6"
-      }
+    }, {
+      "plan": "redis:redis-sandbox"
     }
   ],
   "buildpacks": [
     {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+      "url": "https://github.com/Scalingo/nodejs-buildpack"
     }
   ],
   "environments": {
