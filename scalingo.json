@@ -199,7 +199,7 @@
   "image": "Scalingo/nodejs-buildpack",
   "addons": [
     {
-      "plan": "postgresql:postgresql-sandbox",
+      "plan": "postgresql:postgresql-starter-512",
       "options": {
         "version": "13"
       }
