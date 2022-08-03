@@ -1,1 +1,2 @@
-web: npx directus bootstrap & npx directus start
+postdeploy: npx directus bootstrap
+web: npx directus start
